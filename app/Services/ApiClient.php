@@ -16,7 +16,7 @@ class ApiClient
     private function prepareQuery(array $query): array
     {
         return array_filter(array_merge([
-            'key' => config('api.token'),
+            'key' => config('apigit.token'),
         ], $query));
     }
 }
