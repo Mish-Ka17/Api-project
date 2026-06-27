@@ -7,9 +7,21 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+## О проекте Api-project
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Выгрузка данных по указанным энпоинтам (Продажи, Заказы, Склады, Доходы) осуществляется посредством консольной команды (ImportCommand), вызываемой в формате: [php artisan app:import-command --from=Дата начальная --to=Дата конечная --page=Номер страницы --limit=Количество записей на странице],
+где :
+    Дата начальная и Дата конечная - строки вида Y-m-d (Например, 2026-06-27),
+    Номер страницы - целое число (по умолчанию 1),
+    Количество записей на странице - целое число (по умолчанию 500).
+
+Дата начальная и Дата конечная (--from и --to) - обязательные параметры.
+Для выгрузки данных по Складам по умолчанию берется текущая дата вне зависимости от указанных Дата начальная и Дата конечная.
+Номер страницы и Количество записей на странице (--page и --limit) - необязательные параметры (по умолчанию 1 и 500, соответственно).
+
+
+**************************************************
+ Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
 - [Simple, fast routing engine](https://laravel.com/docs/routing).
 - [Powerful dependency injection container](https://laravel.com/docs/container).
