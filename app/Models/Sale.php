@@ -49,7 +49,7 @@ class Sale extends Model
          'subject',
          'category',
          'brand',
-
+        'imported_at',
          'is_storno',
     ];
 

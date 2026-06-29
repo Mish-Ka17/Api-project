@@ -90,7 +90,7 @@ class ImportService
                         'subject' => $row['subject'],
                         'category' => $row['category'],
                         'brand' => $row['brand'],
-
+                        'imported_at' => now(),
                         'is_storno' => $row['is_storno'],
 
                     ]
